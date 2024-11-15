@@ -1,7 +1,7 @@
 import random, Computer, time
 from music import sound_effect
 
-line = "-------------------------------- "
+line = "--------------------------------"
 
 def mainGame(player_charge, mag_size):
     shotgun = mag_set(mag_size)
