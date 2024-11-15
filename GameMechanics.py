@@ -8,6 +8,7 @@ def mainGame(player_charge, mag_size):
     turn = 0
 
     plist = list(player_charge)
+    
 
     while len(shotgun) != 0:
         if mag_checker(shotgun) != 1:
@@ -16,6 +17,7 @@ def mainGame(player_charge, mag_size):
             break
 
         print_mag(shotgun)
+
         loader, shotgun = load(shotgun)  # Load the next shell
         current_player = plist[turn % len(plist)]  # Alternate between players
 
@@ -41,10 +43,9 @@ def mainGame(player_charge, mag_size):
             # AI turn
             ai_target = Computer.bot(current_player, player_charge, plist, shotgun)  
             print(line)
-            print(f"{current_player} chooses to shoot {ai_target}.")
+            print(f"{current_player} chooses to shoot himself.")
             fire(ai_target, loader, player_charge)
-            print(player_charge)
-
+            
         # Check for game end conditions
         for player, charge in player_charge.items():
             if charge <= 0:
@@ -53,6 +54,7 @@ def mainGame(player_charge, mag_size):
                 return  # Exit the game loop and end the function
 
         turn += 1
+        print_stats(shotgun, player_charge)
 
     else:
         print("\nBoth players survived. It's a draw!")
@@ -119,9 +121,10 @@ def print_mag(shotgun):
 
     total_live = shotgun.count(1)
     total_blank = shotgun.count(0)
+    dis_shotgun = sorted(shotgun, reverse=True)
     print("here's Your current Line-up \n")
 
-    for bullet in shotgun:
+    for bullet in dis_shotgun:
         
         if(bullet == 1):
             print("{L}", end=" ")
