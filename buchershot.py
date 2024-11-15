@@ -1,15 +1,25 @@
 import GameMechanics
+from music import background_music
 import time
 
 def main():
     user, bot = loading_screen()
     player_charge = {user: 3, bot: 3}
-    game_result, losing_player = GameMechanics.mainGame(player_charge, 15)
 
-    if game_result == 0:
-        print("\nIt's a Tie! No bullets left.")
-    elif game_result == -1:
-        print(f"\nGame ends! {losing_player} ran out of charges!")
+    while(True):
+
+        time.sleep(2)
+        background_music()
+        game_result, losing_player = GameMechanics.mainGame(player_charge, 15)
+        
+
+        if game_result == 0:
+            print("\nIt's a Tie! No bullets left.")
+            break;
+        elif game_result == -1:
+            print(f"\nGame ends! {losing_player} ran out of charges!")
+            break;
+            
 
 def loading_screen():
     """Displays a loading screen with delays."""
@@ -26,5 +36,6 @@ def loading_screen():
     print("\n")
 
     return username, botname
+
 
 main()

@@ -1,4 +1,5 @@
 import random, Computer, time
+from music import sound_effect
 
 line = "-------------------------------- "
 
@@ -33,9 +34,12 @@ def mainGame(player_charge, mag_size):
                 turn += 1
                 continue
             
-            print("💥Boom💥")
+            
             time.sleep(3)
             fire(user_target, shell, player_charge)
+            if(shell == 0 and current_player == user_target):
+                print(f"{current_player} will Shoot Again!")
+                turn +=1
 
             time.sleep(4)  # Add delay before the next turn
         else:
@@ -48,9 +52,12 @@ def mainGame(player_charge, mag_size):
             print(f"{current_player} chooses to shoot {bot_target}.")
              
             time.sleep(1)
-            print("💥Boom💥")
+            
            
             fire(bot_target, shell, player_charge)
+            if(shell == 0 and current_player == bot_target):
+                print(f"{current_player} will shoot again!")
+                turn +=1
 
             time.sleep(4)  # Add delay before the next turn
 
@@ -85,10 +92,13 @@ def fire(player, shell , players_charge):
     
    
         if shell == 1:
+            sound_effect('./Music&Sound_Effects/desert-eagle-gunshot.wav', 0.7)
             print(f"fired a live shell! 💥BOOM💥 ! {player} lost one 🪫 ")
             players_charge[player] -= 1  # Reduce the player's hearts
              # Player loses
         elif shell == 0:
+
+            sound_effect( './Music&Sound_Effects/happy.wav',0.7)
             print(f"fired a blank shell. {player} is Safe! ✅")
 
         else:
@@ -96,7 +106,7 @@ def fire(player, shell , players_charge):
 
 
     
-        return players_charge  # Player survives
+        return players_charge, shell # Player survives
 
 def mag_checker(shotgun):
     # Return False if there are no live or blank bullets left
@@ -127,6 +137,7 @@ def print_stats(shotgun, player_charge):
     print(line * 2 )
     for player, charge in player_charge.items():
         print(f"Player: ", player, " | Charge:", "🔋"*charge )
+        
 
     print(line * 2)
 

@@ -1,0 +1,23 @@
+from pygame import mixer
+import time
+
+def background_music(volume=0.2, track='./Music&Sound_Effects/BetterDay_Ringtone.wav'):
+    mixer.init()
+
+    # Load the music file
+    mixer.music.load(track)
+
+    # Set volume
+    mixer.music.set_volume(volume)
+
+    # Play the music in a loop
+    mixer.music.play(loops=-1)  # -1 means the music will loop indefinitely
+
+# Function to play a one-time sound effect
+def sound_effect(SE_path, volume=0.7):
+    sound_effect = mixer.Sound(SE_path)
+    sound_effect.set_volume(volume)
+    sound_effect.play()
+        
+       
+
