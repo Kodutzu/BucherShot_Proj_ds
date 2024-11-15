@@ -2,6 +2,7 @@
      "No_of_userCharges": 3,
      "No_of_botCharges": 3,
      "No_of_Bullets": 15,
-     "Background Music": "./Music&Sound_Effects/BetterDay_Ringtone.wav"
+     "Background Music": "./Music&Sound_Effects/BetterDay_Ringtone.wav",
+     "Developers": ["Iamdkpro" ,"Chow" ]
 
-  }
+}
