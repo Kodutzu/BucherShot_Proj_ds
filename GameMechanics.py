@@ -1,63 +1,64 @@
-import random, Computer
+import random, Computer, time
 
-line = "-------------------------------- \n"
+line = "-------------------------------- "
 
 def mainGame(player_charge, mag_size):
-    # Initialize the game state
     shotgun = mag_set(mag_size)
     turn = 0
-
     plist = list(player_charge)
-    
 
     while len(shotgun) != 0:
         if mag_checker(shotgun) != 1:
-            print(line)
-            print("\nIt's a tie!")
-            break
+            return 0, " "
+
+        for player, charge in player_charge.items():
+            if charge <= 0:
+                return -1, player
+
+        shell = load(shotgun)
+        current_player = plist[turn % len(plist)]
 
         print_mag(shotgun)
 
-        loader, shotgun = load(shotgun)  # Load the next shell
-        current_player = plist[turn % len(plist)]  # Alternate between players
-
         print(f"\n{current_player}'s turn!")
+        
 
-        if current_player == 'you':
-            # Player turn
-            print(line)
+        if current_player == plist[0]:
             print(f"Available targets: {plist}")
-            target = input(f"Who do you want to shoot?: ")
+            user_target = input(f"Who do you want to shoot?: ")
 
-            # Validate target
-            if target not in plist:
-                print(line)
-                print("Invalid target. Skipping turn.")
+            if user_target not in plist:
+                print("\nInvalid target. Skipping turn.")
+                time.sleep(2)
                 turn += 1
                 continue
-
-            fire(target, loader, player_charge)
-            print(player_charge)
-
-        else:
-            # AI turn
-            ai_target = Computer.bot(current_player, player_charge, plist, shotgun)  
-            print(line)
-            print(f"{current_player} chooses to shoot himself.")
-            fire(ai_target, loader, player_charge)
             
-        # Check for game end conditions
-        for player, charge in player_charge.items():
-            if charge <= 0:
-                print(line)
-                print(f"Game ends! {player} ran out of charges!")
-                return  # Exit the game loop and end the function
+            print("💥Boom💥")
+            time.sleep(3)
+            fire(user_target, shell, player_charge)
+
+            time.sleep(4)  # Add delay before the next turn
+        else:
+            print(f"{current_player} is thinking 💭..., let him cook!🍳")
+
+            time.sleep(3)  # Simulate bot decision-making
+
+            bot_target = Computer.bot(current_player, player_charge, plist, shotgun)
+
+            print(f"{current_player} chooses to shoot {bot_target}.")
+             
+            time.sleep(1)
+            print("💥Boom💥")
+           
+            fire(bot_target, shell, player_charge)
+
+            time.sleep(4)  # Add delay before the next turn
 
         turn += 1
-        print_stats(shotgun, player_charge)
+        shotgun.remove(shell)
 
-    else:
-        print("\nBoth players survived. It's a draw!")
+        print_stats(shotgun, player_charge)
+        time.sleep(4)  # Add delay before the next turn
 
 
 def mag_set(size, live_ratio=0.5):
@@ -77,20 +78,18 @@ def mag_set(size, live_ratio=0.5):
     return mag
 
 def load(Shotgun):
-    selector = random.randint(0, len(Shotgun)-1)
-    shell = Shotgun[selector]
-    Shotgun.pop(selector) 
-    return shell, Shotgun
+    shell = random.choice(Shotgun)
+    return shell
 
 def fire(player, shell , players_charge):
     
    
         if shell == 1:
-            print(f"{player} fired a live shell! BOOM! -1 heart")
+            print(f"fired a live shell! 💥BOOM💥 ! {player} lost one 🪫 ")
             players_charge[player] -= 1  # Reduce the player's hearts
              # Player loses
         elif shell == 0:
-            print(f"{player} fired a blank shell. Safe!")
+            print(f"fired a blank shell. {player} is Safe! ✅")
 
         else:
             pass
@@ -100,48 +99,36 @@ def fire(player, shell , players_charge):
         return players_charge  # Player survives
 
 def mag_checker(shotgun):
-
-    no_of_live = 0
-    no_of_blank = 0
-    for bullet in shotgun:
-        if(bullet == 1 ):
-            no_of_live+=1
-
-        else:
-            no_of_blank +=1
-
-    if((no_of_live ==0) or (no_of_blank== 0) ):    
-         return 0
-    else:
-        return 1
+    # Return False if there are no live or blank bullets left
+    if not shotgun or shotgun.count(1) == 0 or shotgun.count(0) == 0:
+        return 0
+    return 1
     
-    
-
 def print_mag(shotgun):
 
-    total_live = shotgun.count(1)
-    total_blank = shotgun.count(0)
     dis_shotgun = sorted(shotgun, reverse=True)
     print("here's Your current Line-up \n")
 
     for bullet in dis_shotgun:
         
         if(bullet == 1):
-            print("{L}", end=" ")
+            print("🔴", end=" ")
             
         elif(bullet == 0):
-            print("(B)", end=" ")
+            print("🟢", end=" ")
 
     print("\n\n")
-    print("Total Live Bullet: ", total_live)
-    print("Total Blank Bullet: ", total_blank)
+    print("Total Live Bullet: ", shotgun.count(1))
+    print("Total Blank Bullet: ", shotgun.count(0))
 
 def print_stats(shotgun, player_charge):
     
     # After Bullet shot!
-    print(line)
-    print(player_charge, " | " , "Mags: " ,shotgun, end = "\n\n")
-    print(line)
+    print(line * 2 )
+    for player, charge in player_charge.items():
+        print(f"Player: ", player, " | Charge:", "🔋"*charge )
+
+    print(line * 2)
 
 if __name__ == "__main__":
     mainGame()
