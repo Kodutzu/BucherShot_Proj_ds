@@ -1,7 +1,7 @@
 from pygame import mixer
 import time
 
-def background_music(volume=0.2, track='./Music&Sound_Effects/BetterDay_Ringtone.wav'):
+def background_music(volume=0.2, track = "./Music&Sound_Effects/BetterDay_Ringtone.wav"):
     mixer.init()
 
     # Load the music file
