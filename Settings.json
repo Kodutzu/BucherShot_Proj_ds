@@ -16,7 +16,13 @@
           "Shot": "./Music_SoundEffects/desert-eagle-gunshot.wav",
           "Volume": 0.7
      },
-  
+     
+     "Bot": {
+
+          "Aggressive_threshold": 0.5,
+          "Critical_health": 1       
+
+     },
      
      "Developers": ["Iamdkpro" ,"Chow" ]
 
