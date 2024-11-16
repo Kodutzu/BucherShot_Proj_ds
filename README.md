@@ -128,11 +128,11 @@ Survive the round while strategically managing your decisions. Either shoot your
    - Play defensively and conserve charges if you’re falling behind.  
 
 ---
-###Troubleshooting:
+### Troubleshooting:
 
-1. If the game doesn’t run, ensure all required modules are installed (pygame for music).
+1. If the game doesn’t run, ensure to run `pip install -r requirements.txt` in your terminal!
 2. Check the Settings.json file for valid configurations.
 
-Enjoy **BucherShot Mini**! Good luck, and may the blanks be with you! 🔫🟢
+Enjoy **BucherShot Mini**! 
 
 
