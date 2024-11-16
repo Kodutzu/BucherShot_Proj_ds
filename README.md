@@ -2,7 +2,7 @@
 My friend and I built this game as a school project. It’s a two-player game with strategic decision-making!
 
 ## About the Game
-This is my best programming project to date, completed in 2 days! \n
+This is my best programming project to date, completed in 2 days!
 There’s also a Settings.json file for easy customization.
 
 ## Features
