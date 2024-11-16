@@ -1,7 +1,7 @@
 # Buchershot Mini-Version!
 Me and my friend built this game as a school project. It’s a two-player game with strategic decision-making!
 
-##About the Game
+## About the Game
 This is my best programming project to date, completed in just 2 days! You can download and play the game. There’s also a Settings.json file for easy customization.
 
 ## Features
