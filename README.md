@@ -32,7 +32,7 @@ Survive the round while strategically managing your decisions. Either shoot your
    - Contains a randomized mix of live (🔴) and blank (🟢) shells.
    - The shells are drawn randomly during each turn.
 
-### **Gameplay **:
+### **Gameplay**:
 
 1. **Overall Concept**:  
    - The game revolves around a shotgun loaded with two types of shells:  
