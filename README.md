@@ -1,4 +1,4 @@
-# Buchershot Mini-Version!
+# Buckshot Roulette Mini!
 My friend and I built this game as a school project. It’s a two-player game with strategic decision-making!
 
 ## About the Game
@@ -15,7 +15,7 @@ Immersive background music and sound effects.
 1. Download The Repository, Unzip it!
 2. Then Search Buchershot.py and Open it in your IDE!
 3. Then Go to Terminal and type -: `pip install -r requirements.txt`
-4. And Then Finally Type -: `python buchershot.py` in Terminal - (Basically run the program)
+4. And Then Finally Type -: `python buckshot.py` in Terminal - (Basically run the program)
 
 
 ## Libraries:

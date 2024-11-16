@@ -28,6 +28,7 @@ def mag_set(size, live_ratio=data["live_ratio"]):
 
 def load(Shotgun):
     shell = random.choice(Shotgun)
+    
     return shell
 
 def fire(player, shell , players_charge):
