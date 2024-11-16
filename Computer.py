@@ -1,4 +1,4 @@
-import random, GameMechanics
+import random
 
 
 def bot(player_name, player_charge, plist, shotgun):

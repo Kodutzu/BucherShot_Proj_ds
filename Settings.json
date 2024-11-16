@@ -2,7 +2,22 @@
      "No_of_userCharges": 3,
      "No_of_botCharges": 3,
      "No_of_Bullets": 15,
-     "Background Music": "./Music&Sound_Effects/Dev_alter_Track.mpeg",
+     "live_ratio": 0.6,
+
+     "Background Music": {
+
+          "Track": "./Music_SoundEffects/Dev_alter_Track.mpeg",
+          "Volume": 0.3
+     },
+     
+     "Sound_effect": {
+
+          "Safe": "./Music_SoundEffects/happy.wav",
+          "Shot": "./Music_SoundEffects/desert-eagle-gunshot.wav",
+          "Volume": 0.7
+     },
+  
+     
      "Developers": ["Iamdkpro" ,"Chow" ]
 
 }

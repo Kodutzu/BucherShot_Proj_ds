@@ -1,5 +1,5 @@
-import GameMechanics
-from music import background_music
+import Mechanics_Level.Level_one as l1
+from Music_SoundEffects.music  import background_music as bgm
 import json
 import time
 
@@ -16,8 +16,8 @@ def main():
     while(True):
 
         time.sleep(2)
-        background_music(0.3, data["Background Music"])
-        game_result, losing_player = GameMechanics.mainGame(player_charge,data["No_of_Bullets"]  )
+        bgm(data["Background Music"]["Volume"], data["Background Music"]["Track"])
+        game_result, losing_player = l1.mainGame(player_charge,data["No_of_Bullets"]  )
         
 
         if game_result == 0:
