@@ -47,7 +47,10 @@ def mainGame(player_charge, mag_size):
 
             bot_target = Computer.bot(current_player, player_charge, plist, shotgun)
 
-            print(f"{current_player} chooses to shoot {bot_target}.")
+            if(current_player == bot_target):
+                print(f"{current_player} chooses to shoot itself.")
+            else:
+                print(f"{current_player} chooses to shoot {bot_target}.")
              
             time.sleep(1)
             
