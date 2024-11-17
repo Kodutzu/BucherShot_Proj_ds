@@ -6,16 +6,13 @@ This is my best programming project to date, completed in 3 days!
 
 ## Installation
 
-1. Download The Repository, Unzip it!
+1. Download The Repository and unzip it!
 2. Then Search Buckshot.py and Open it in your IDE!
 3. Then Go to Terminal and type -: `pip install -r requirements.txt`
 4. And Then Finally Type -: `python buckshot.py` in Terminal - (Basically run the program)
 
 ## **How to Play Buckshot Mini**
 
-Here’s a step-by-step guide to help you play your mini version of Buckshot Roulette:
-
----
 
 ### **Objective**:
 Survive the round while strategically managing your decisions. Either shoot yourself or the opponent (Bot) and hope the shell is a blank. The last player standing wins.
@@ -86,7 +83,7 @@ Survive the round while strategically managing your decisions. Either shoot your
         
    - The Bot announces its target and fires.
   
-### _Important: if you shoot yourself with a blank bullet, then you will be given another chance to shoot! This also applies for the bot_
+### Important: if you shoot yourself with a blank bullet, then you will be given another chance to shoot! This also applies for the bot
 
 ---
 
@@ -100,37 +97,81 @@ Survive the round while strategically managing your decisions. Either shoot your
 
 ---
 
-### **Additional Features**:
+## **Settings Customization**
 
-- **Music & Sound Effects**:  
-  - The game includes sound effects for firing the shotgun and background music for added immersion.  
-
-- **Settings Customization**:  
-  - Modify the `Settings.json` file to adjust the game parameters:
-    
-    - `No_of_userCharges`: Number of charges (lives) you start with.  
-    - `No_of_botCharges`: Number of charges for the Bot.  
-    - `No_of_Bullets`: Total bullets (live + blank) in the magazine.
-    - `live_ratio`: To Manipulate the Ratio of Live and Blank Bullet
+You can configure the gameplay, sound, and bot behavior by editing the `Settings.json` file. This allows you to tailor the game to your preferences. Below is a breakdown of each setting and its purpose:
 
 ---
 
-### **Game Tips**:
-1. **Risk Management**:  
-   - Don’t shoot yourself if live bullets dominate the magazine.  
-   - When blanks dominate, it’s safer to shoot yourself to avoid giving your opponent an advantage.  
+#### **Game Parameters**
+- **`No_of_userCharges`**:  
+  - The number of charges (lives) the player starts with.  
+  - Example: `"No_of_userCharges": 3` gives you 3 Charges.  
+  - Increase or decrease this value to make the game easier or harder for yourself.
 
-2. **Analyze Probabilities**:  
-   - Watch the magazine lineup and remaining bullets to anticipate the odds of drawing a live shell.  
+- **`No_of_botCharges`**:  
+  - The number of charges (lives) the Bot starts with.  
+  - Example: `"No_of_botCharges": 3` gives the Bot 3 Charges.  
+  - Adjust this value to balance the difficulty.
 
-3. **Play Aggressively or Defensively**:  
-   - Target the Bot early if you feel confident about the odds.  
-   - Play defensively and conserve charges if you’re falling behind.  
+- **`No_of_Bullets`**:  
+  - The total number of bullets (live + blank) in the magazine.  
+  - Example: `"No_of_Bullets": 16` means 16 bullets in the game.  
+  - A higher number increases the game's length, while a lower number makes it shorter and more intense.
+
+- **`live_ratio`**:  
+  - The proportion of live bullets to total bullets.  
+  - Example: `"live_ratio": 0.5` means 50% of the bullets are live, and the remaining 50% are blank.  
+  - Adjust this value to control the danger level:
+    - **Higher Ratio (e.g., 0.7)**: More live bullets, making the game riskier.  
+    - **Lower Ratio (e.g., 0.3)**: More blank bullets, reducing the risk.
 
 ---
+
+#### **Sound and Music Settings**
+- **`Background Music`**:  
+  - Customize the music that plays during the game.  
+    - **`Track`**: The path to the music file. You can replace this with any compatible file path.  
+      - Example: `"Track": "./Music_SoundEffects/Music/Your_Track_Name"`.
+        
+   - **`Volume`**: Set the volume of the background music (0.0 to 1.0).
+   -   
+      - Example: `"Volume": 0.3` sets the music volume to 30%.
+
+   - Replace `Your_Track_Name` with the name of your Track.
+
+- **`Sound_effect`**:
+  - Define sound effects for specific game events:
+    - **`Blank`**: The sound effect for a blank shot.  
+      - Example: `"Blank": "./Music_SoundEffects/Sound_effects/Your_SoundEffect_Name"`.  
+    - **`Live`**: The sound effect for a live shot.  
+      - Example: `"Live": "./Music_SoundEffects/Sound_effects/Your_SoundEffect_Name"`.  
+    - **`Victory`**: The sound effect for victory.  
+      - Example: `"Victory": "./Music_SoundEffects/Sound_effects/Your_SoundEffect_Name"`.  
+    - **`Volume`**: Set the volume for sound effects (0.0 to 1.0).  
+      - Example: `"Volume": 0.7` sets sound effect volume to 70%.
+        
+  - Replace `Your_SoundEffect_Name` with the name of your Sound Effect
+
+---
+
+#### **Bot Behavior**
+- **`Bot`**:  
+  - Configure the Bot's decision-making strategy:
+    - **`Aggressive_threshold`**:  
+      - Determines the probability threshold for aggressive behaviour.  
+      - Example: `"Aggressive_threshold": 0.5` means the Bot becomes aggressive when live bullets are more likely than blanks.  
+      - Lower values make the Bot more defensive, while higher values make it more aggressive.  
+    - **`Critical_health`**:  
+      - The charge count at which the Bot considers itself critically endangered and adjusts its strategy.  
+      - Example: `"Critical_health": 1` means the Bot becomes cautious when its charges drop to 1.
+
+
+---
+
 ### Troubleshooting:
 
-1. If the game doesn’t run, ensure to run `pip install -r requirements.txt` in your terminal!
+1. ensure to run `pip install -r requirements.txt` in your terminal!
 2. Check the Settings.json file for valid configurations.
 
 Enjoy **Buckshot Mini**! 
