@@ -7,11 +7,11 @@ This is my best programming project to date, completed in 3 days!
 ## Installation
 
 1. Download The Repository, Unzip it!
-2. Then Search Buchershot.py and Open it in your IDE!
+2. Then Search Buckshot.py and Open it in your IDE!
 3. Then Go to Terminal and type -: `pip install -r requirements.txt`
 4. And Then Finally Type -: `python buckshot.py` in Terminal - (Basically run the program)
 
-## **How to Play BucherShot Mini**
+## **How to Play Buckshot Mini**
 
 Here’s a step-by-step guide to help you play your mini version of Buckshot Roulette:
 
@@ -133,6 +133,6 @@ Survive the round while strategically managing your decisions. Either shoot your
 1. If the game doesn’t run, ensure to run `pip install -r requirements.txt` in your terminal!
 2. Check the Settings.json file for valid configurations.
 
-Enjoy **BucherShot Mini**! 
+Enjoy **Buckshot Mini**! 
 
 
