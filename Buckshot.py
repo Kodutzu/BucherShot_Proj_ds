@@ -1,5 +1,5 @@
 import Mechanics_Level.Level_one as l1
-from Music_SoundEffects.music  import background_music as bgm , sound_effect, music_stop
+from Sounds.music  import background_music as bgm , sound_effect, music_stop
 import json
 import time
 

@@ -1,5 +1,5 @@
 import random
-from Music_SoundEffects.music import sound_effect
+from Sounds.music import sound_effect
 import json
 
 line = "--------------------------------"

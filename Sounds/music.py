@@ -4,7 +4,7 @@ from pygame import mixer
 
 
 
-def background_music(volume=0.2, track = "./Music&Sound_Effects/Buckshot_mini_SE.mpeg"):
+def background_music(volume=0.2, track = "./Sounds/Buckshot_mini_SE.mpeg"):
     
     mixer.init()
 

@@ -6,15 +6,15 @@
 
      "Background Music": {
 
-          "Track": "./Music_SoundEffects/Music/Buckshot_mini_SE.mpeg", 
+          "Track": "./Sounds/Music/Buckshot_mini_SE.mpeg", 
           "Volume": 0.3
      },
 
      "Sound_effect": {
 
-          "Blank": "./Music_SoundEffects/Sound_effects/Blank_Shot_SFX.mp3",
-          "Live": "./Music_SoundEffects/Sound_effects/Live_Shot_SFX_One.mp3",
-          "Victory": "./Music_SoundEffects/Sound_effects/Victory_SFX.mp3",
+          "Blank": "./Sounds/Sound_effects/Blank_Shot_SFX.mp3",
+          "Live": "./Sounds/Sound_effects/Live_Shot_SFX_One.mp3",
+          "Victory": "./Sounds/Sound_effects/Victory_SFX.mp3",
           "Volume": 0.7
      },
      
