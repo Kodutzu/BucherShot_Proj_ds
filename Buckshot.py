@@ -26,7 +26,8 @@ def main():
         elif game_result == -1:
             
              
-            
+            music_stop()
+            sound_effect(data["Sound_effect"]["Victory"], data["Sound_effect"]["Volume"])
             print(f"\nGame ends! {losing_player} ran out of charges!")
             time.sleep(5)
             
