@@ -7,7 +7,7 @@
      "Background Music": {
 
           "Track": "./Sounds/Music/Buckshot_mini_SE.mpeg", 
-          "Volume": 0.3
+          "Volume": 0.5
      },
 
      "Sound_effect": {
@@ -15,7 +15,7 @@
           "Blank": "./Sounds/Sound_effects/Blank_Shot_SFX.mp3",
           "Live": "./Sounds/Sound_effects/Live_Shot_SFX_One.mp3",
           "Victory": "./Sounds/Sound_effects/Victory_SFX.mp3",
-          "Volume": 0.7
+          "Volume": 1.0
      },
      
      "Bot": {
