@@ -1,7 +1,11 @@
+import os
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "1"
 from pygame import mixer
-import time
+
+
 
 def background_music(volume=0.2, track = "./Music&Sound_Effects/Buckshot_mini_SE.mpeg"):
+    
     mixer.init()
 
     # Load the music file
