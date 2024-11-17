@@ -1,5 +1,9 @@
 import Computer, time
 from Mechanics_Level.GameMechanics import *
+import json
+
+with open('./Settings.json', 'r') as f:
+        data = json.load(f)
 
 def mainGame(player_charge, mag_size):
     shotgun = mag_set(mag_size)
@@ -24,7 +28,7 @@ def mainGame(player_charge, mag_size):
 
         if current_player == plist[0]:
             print(f"Available targets: {plist}")
-            user_target = input(f"Who do you want to shoot?: ")
+            user_target = input(f"Who do you want to shoot?: ").lower()
 
             if user_target not in plist:
                 print("\nInvalid target. Skipping turn.")
@@ -36,6 +40,7 @@ def mainGame(player_charge, mag_size):
             time.sleep(3)
             fire(user_target, shell, player_charge)
             if(shell == 0 and current_player == user_target):
+            
                 print(f"{current_player} will Shoot Again!")
                 turn +=1
 

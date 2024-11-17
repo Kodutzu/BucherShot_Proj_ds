@@ -1,26 +1,27 @@
 {
      "No_of_userCharges": 3,
      "No_of_botCharges": 3,
-     "No_of_Bullets": 15,
-     "live_ratio": 0.6,
+     "No_of_Bullets": 16,
+     "live_ratio": 0.5,
 
      "Background Music": {
 
-          "Track": "./Music_SoundEffects/Buckshot_mini_SE.mpeg",
+          "Track": "./Music_SoundEffects/Music/Buckshot_mini_SE.mpeg", 
           "Volume": 0.3
      },
-     
+
      "Sound_effect": {
 
-          "Safe": "./Music_SoundEffects/happy.wav",
-          "Shot": "./Music_SoundEffects/desert-eagle-gunshot.wav",
+          "Blank": "./Music_SoundEffects/Sound_effects/Blank_Shot_SFX.mp3",
+          "Live": "./Music_SoundEffects/Sound_effects/Live_Shot_SFX_One.mp3",
+          "Victory": "./Music_SoundEffects/Sound_effects/Victory_SFX.mp3",
           "Volume": 0.7
      },
      
      "Bot": {
 
           "Aggressive_threshold": 0.5,
-          "Critical_health": 1       
+          "Critical_health": 1           
 
      }
 

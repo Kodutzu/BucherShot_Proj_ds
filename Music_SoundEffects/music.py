@@ -12,6 +12,11 @@ def background_music(volume=0.2, track = "./Music&Sound_Effects/Buckshot_mini_SE
 
     # Play the music in a loop
     mixer.music.play(loops=-1)  # -1 means the music will loop indefinitely
+    
+
+def music_stop():
+
+    mixer.music.stop()
 
 # Function to play a one-time sound effect
 def sound_effect(SE_path, volume=0.7):

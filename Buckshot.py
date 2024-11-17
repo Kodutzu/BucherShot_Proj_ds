@@ -1,5 +1,5 @@
 import Mechanics_Level.Level_one as l1
-from Music_SoundEffects.music  import background_music as bgm
+from Music_SoundEffects.music  import background_music as bgm , sound_effect, music_stop
 import json
 import time
 
@@ -25,17 +25,23 @@ def main():
             break;
         elif game_result == -1:
             
+             
+            music_stop()
+            sound_effect(data["Sound_effect"]["Victory"], data["Sound_effect"]["Volume"])
             print(f"\nGame ends! {losing_player} ran out of charges!")
-            break;
+            time.sleep(5)
             
+            break;
+        
+   
 
 def loading_screen():
 
     while(True):
-        username = input("Enter your name: ")
-        botname = input("Name Your Bot: ")
+        username = input("Enter your name: ").lower()
+        botname = input("Name Your Bot: ").lower()
 
-        if(username.lower() == botname.lower()):
+        if(username == botname):
             print("💥Error, You can't have same name for Bot")
             print()
         else:

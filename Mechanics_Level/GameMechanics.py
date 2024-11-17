@@ -35,13 +35,13 @@ def fire(player, shell , players_charge):
     
    
         if shell == 1:
-            sound_effect(data["Sound_effect"]["Shot"], data["Sound_effect"]["Volume"])
+            sound_effect(data["Sound_effect"]["Live"], data["Sound_effect"]["Volume"])
             print(f"fired a live shell! 💥BOOM💥 ! {player} lost one 🪫 ")
             players_charge[player] -= 1  # Reduce the player's hearts
              # Player loses
         elif shell == 0:
 
-            sound_effect(data["Sound_effect"]["Safe"], data["Sound_effect"]["Volume"])
+            sound_effect(data["Sound_effect"]["Blank"], data["Sound_effect"]["Volume"])
             print(f"fired a blank shell. {player} is Safe! ✅")
 
         else:
