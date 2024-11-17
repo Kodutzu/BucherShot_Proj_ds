@@ -92,8 +92,7 @@ Survive the round while strategically managing your decisions. Either shoot your
      - **If the Bot’s charges drop to 0**: You win! 🎉  
      - **If your charges drop to 0**: The Bot wins. 💀
        
-   - If all bullets are used and both players still have charges, the game ends in a **Draw**.
-   - If Only Live bullet or Only Blank are left in the Magazine, then the game ends in a **Draw** again.
+   - If Only Live bullet or Only Blank are left in the Magazine, then the game ends in a **Draw**.
 
 ---
 

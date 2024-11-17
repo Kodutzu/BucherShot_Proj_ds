@@ -19,15 +19,14 @@ def main():
         bgm(data["Background Music"]["Volume"], data["Background Music"]["Track"])
         game_result, losing_player = l1.mainGame(player_charge,data["No_of_Bullets"]  )
         
-
+        
         if game_result == 0:
-            print("\nIt's a Tie! No bullets left.")
+            print("\nIt's a Tie!")
             break;
         elif game_result == -1:
             
              
-            music_stop()
-            sound_effect(data["Sound_effect"]["Victory"], data["Sound_effect"]["Volume"])
+            
             print(f"\nGame ends! {losing_player} ran out of charges!")
             time.sleep(5)
             
