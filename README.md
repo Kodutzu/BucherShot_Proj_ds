@@ -6,16 +6,13 @@ This is my best programming project to date, completed in 3 days!
 
 ## Installation
 
-1. Download The Repository, Unzip it!
+1. Download The Repository and unzip it!
 2. Then Search Buckshot.py and Open it in your IDE!
 3. Then Go to Terminal and type -: `pip install -r requirements.txt`
 4. And Then Finally Type -: `python buckshot.py` in Terminal - (Basically run the program)
 
 ## **How to Play Buckshot Mini**
 
-Here’s a step-by-step guide to help you play your mini version of Buckshot Roulette:
-
----
 
 ### **Objective**:
 Survive the round while strategically managing your decisions. Either shoot yourself or the opponent (Bot) and hope the shell is a blank. The last player standing wins.
@@ -86,7 +83,7 @@ Survive the round while strategically managing your decisions. Either shoot your
         
    - The Bot announces its target and fires.
   
-### _Important: if you shoot yourself with a blank bullet, then you will be given another chance to shoot! This also applies for the bot_
+### Important: if you shoot yourself with a blank bullet, then you will be given another chance to shoot! This also applies for the bot
 
 ---
 
@@ -172,22 +169,9 @@ You can configure the gameplay, sound, and bot behavior by editing the `Settings
 
 ---
 
-### **Game Tips**:
-1. **Risk Management**:  
-   - Don’t shoot yourself if live bullets dominate the magazine.  
-   - When blanks dominate, it’s safer to shoot yourself to avoid giving your opponent an advantage.  
-
-2. **Analyze Probabilities**:  
-   - Watch the magazine lineup and remaining bullets to anticipate the odds of drawing a live shell.  
-
-3. **Play Aggressively or Defensively**:  
-   - Target the Bot early if you feel confident about the odds.  
-   - Play defensively and conserve charges if you’re falling behind.  
-
----
 ### Troubleshooting:
 
-1. If the game doesn’t run, ensure to run `pip install -r requirements.txt` in your terminal!
+1. ensure to run `pip install -r requirements.txt` in your terminal!
 2. Check the Settings.json file for valid configurations.
 
 Enjoy **Buckshot Mini**! 
