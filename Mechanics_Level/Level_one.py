@@ -1,4 +1,4 @@
-import Computer, time
+import Mechanics_Level.Computer as Computer, time
 from Mechanics_Level.GameMechanics import *
 import json
 
