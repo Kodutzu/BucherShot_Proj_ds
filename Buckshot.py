@@ -5,6 +5,7 @@ import time
 
 def main():
 
+
     with open('./Settings.json', 'r') as f:
         data = json.load(f)
     
@@ -32,8 +33,6 @@ def main():
             time.sleep(5)
             
             break;
-        
-   
 
 def loading_screen():
 
